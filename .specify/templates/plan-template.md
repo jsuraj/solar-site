@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Site MUST be strictly statically generated (JAMstack only):
+  - No SSR, no API routes, no runtime server logic
+  - All content/assets pre-rendered at build time
+  - CDN-first, static hosting only
+- All other gates determined by constitution file
 
 ## Project Structure
 
