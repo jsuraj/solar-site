@@ -47,15 +47,12 @@
 <!--
 Sync Impact Report
 
-- Version change: 1.0.0 → 1.1.0
-- Modified principles:
-	- Static-first Performance → JAMstack & Static-Only Delivery
-- Added/expanded guidance: JAMstack requirements, SSR/API prohibition, CDN-first, no runtime server logic
-- Removed sections: None
+- Version change: 1.1.0 → 1.2.0
+- Added section: Modern SaaS Design
 - Templates requiring updates:
-	- .specify/templates/plan-template.md ✅ updated (constitution check: "No SSR, JAMstack only")
-	- .specify/templates/spec-template.md ✅ aligned
-	- .specify/templates/tasks-template.md ✅ aligned
+	- .specify/templates/plan-template.md ⚠ pending (add design gate)
+	- .specify/templates/spec-template.md ⚠ pending (add design acceptance)
+	- .specify/templates/tasks-template.md ⚠ pending (add design tasks)
 - Follow-up TODOs:
 	- TODO(RATIFICATION_DATE): original adoption date unknown — please set
 
@@ -80,6 +77,9 @@ Content MUST use canonical URLs, structured metadata (`<title>`, meta descriptio
 
 ### Testing & Quality Gates
 Every change that affects user-facing behavior MUST include relevant tests or automated audits: unit tests for logic, accessibility scans (Lighthouse/axe) for UI, and basic performance budgets. Pull requests MUST pass CI checks before merge. Rationale: Automated gates keep regressions out of production and maintain site quality.
+
+### Modern SaaS Design
+All user-facing pages MUST follow contemporary SaaS design standards: clean layouts, responsive design, clear visual hierarchy, generous whitespace, modern typography, and consistent use of color and iconography. UI components MUST be visually appealing, intuitive, and mobile-friendly. Rationale: Modern design increases user trust, engagement, and conversion, and is expected for competitive SaaS products.
 
 ## Constraints & Standards
 
@@ -110,4 +110,4 @@ Amendments to this constitution MUST be proposed as a documented PR that explain
 - Amendment process: Propose PR → Discussion → Approval by 2 maintainers → Merge → Update `Last Amended` and bump version according to policy.
 - Compliance reviews: Major changes MUST include a plan to update templates and CI gating where applicable.
 
-**Version**: 1.1.0 | **Ratified**: TODO(RATIFICATION_DATE): original adoption date unknown — please set | **Last Amended**: 2026-01-03
+**Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): original adoption date unknown — please set | **Last Amended**: 2026-01-03
