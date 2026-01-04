@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,14 +8,14 @@ const NavBar = () => {
   // Disable body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     // Cleanup function to restore scroll when component unmounts
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -28,8 +29,9 @@ const NavBar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between px-6 py-4 text-sm
-        text-slate-800 md:px-16 lg:px-24 xl:px-32"
+      className="fixed top-0 left-0 right-0 z-50 flex w-full items-center
+        justify-between px-6 py-4 text-sm text-slate-800 md:px-16 lg:px-24
+        xl:px-32 bg-white"
     >
       <a href="https://prebuiltui.com">
         {/* Logo SVG */}
@@ -74,36 +76,21 @@ const NavBar = () => {
         Request free trial
       </button>
       <button
-        className="transition active:scale-90 md:hidden"
+        className="transition active:scale-90 md:hidden cursor-pointer"
         onClick={openMenuHandler}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-menu-icon lucide-menu"
-        >
-          <path d="M4 5h16" />
-          <path d="M4 12h16" />
-          <path d="M4 19h16" />
-        </svg>
+        <Menu size={26} />
       </button>
       <div
-        className={`fixed inset-0 z-[100] h-screen w-screen
-          text-slate-800 flex flex-col items-center justify-center
-          text-lg gap-8 md:hidden transition-transform duration-300 ${
+        className={`fixed inset-0 z-[100] h-screen w-screen text-slate-800 flex
+          flex-col items-center justify-center text-lg gap-8 md:hidden
+          transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         style={{
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)', 
-          backgroundColor: 'rgba(255, 255, 255, 0.7)'
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          backgroundColor: "rgba(255, 255, 255, 0.7)",
         }}
       >
         <a href="/">Home</a>
@@ -113,24 +100,10 @@ const NavBar = () => {
         <button
           className="flex aspect-square size-10 items-center justify-center
             rounded-md bg-slate-100 p-1 text-black transition hover:bg-slate-200
-            active:ring-3 active:ring-white"
+            active:ring-3 active:ring-white cursor-pointer"
           onClick={closeMenuHandler}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-x-icon lucide-x"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <X size={24} />
         </button>
       </div>
     </nav>
