@@ -30,7 +30,7 @@ const NavBar = () => {
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex w-full items-center
-        justify-between px-6 py-4 text-sm text-slate-800 md:px-16 lg:px-24
+        justify-between px-4 py-4 text-sm text-slate-800 md:px-16 lg:px-24
         xl:px-32 bg-white"
     >
       <a href="https://prebuiltui.com">

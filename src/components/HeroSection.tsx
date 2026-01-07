@@ -1,7 +1,7 @@
 
 const HeroSection = () => {
   return (
-    <main className="flex flex-col max-md:gap-20 md:flex-row pb-20 items-center justify-between pt-24 mt-20 px-4 md:px-16 lg:px-24 xl:px-32">
+    <section className="flex flex-col max-md:gap-20 md:flex-row pb-20 items-center justify-between pt-24 mt-20 px-4 md:px-16 lg:px-24 xl:px-32">
       <div className="flex flex-col items-center md:items-start">
         <h1 className="text-center md:text-left text-4xl leading-[46px] md:text-5xl md:leading-[68px] font-semibold max-w-xl text-slate-900">
           AI-powered <br /> influencer marketing made simple.
@@ -20,7 +20,7 @@ const HeroSection = () => {
         </div>
       </div>
       <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/hero-section-showcase-5.png" alt="hero" className="max-w-sm sm:max-w-md lg:max-w-lg 2xl:max-w-xl transition-all duration-300" />
-    </main>
+    </section>
   );
 };
 
