@@ -1,6 +1,8 @@
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import Services from "@/components/Services";
+import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,7 +13,9 @@ export default function Home() {
       </header>
       <main>
         <HeroSection />
-        <Services />
+        <ServicesSection />
+        <AboutSection />
+        <ContactSection />
       </main>
       <Footer />
     </>
