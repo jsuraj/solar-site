@@ -31,7 +31,7 @@ const NavBar = () => {
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex w-full items-center
         justify-between px-4 py-4 text-sm text-slate-800 md:px-16 lg:px-24
-        xl:px-32 bg-white"
+        xl:px-32 bg-white border-b border-slate-200 shadow-sm"
     >
       <a href="https://prebuiltui.com">
         {/* Logo SVG */}
