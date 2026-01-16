@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     // Backwards-compatible fallback for older Next.js versions
+    // Keep both `domains` for older Next.js and `remotePatterns` for newer granular control
     domains: ['picsum.photos', 'raw.githubusercontent.com', 'images.unsplash.com'],
     remotePatterns: [
       {
